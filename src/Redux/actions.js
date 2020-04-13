@@ -16,26 +16,28 @@ export const setDiscipline = (discipline,courses) => dispatch => {
 
 
 export const setCourseswithQuery = (query,courses) => dispatch => {
-
-    const serchCoursesinArray = (array) => {
+    let searchQuery = query.toLowerCase();
+    console.log(searchQuery)
+    const searchCoursesinArray = (array) => {
         let arr =  array.filter((course) => {
-            const name = course["Course Name"];
-            if(name.includes(query)) return course
+            const name = course["Course Name"].toLowerCase();
+            if(name.includes(searchQuery)!== false) return course
        })
        return arr
     }
 
     if(Array.isArray(courses)){
        
-       dispatch(setCourses(serchCoursesinArray(courses)))
+       dispatch(setCourses(searchCoursesinArray(courses)))
 
     }
     else {
+    
         let eachDisciplineArray= Object.values(courses);
-        
+        console.log(eachDisciplineArray)
         let newCourseArray = []
         
-        eachDisciplineArray.forEach((indvidualDisciplineArray) => newCourseArray= newCourseArray.concat (serchCoursesinArray(indvidualDisciplineArray))) 
+        eachDisciplineArray.forEach((indvidualDisciplineArray) => newCourseArray= newCourseArray.concat (searchCoursesinArray(indvidualDisciplineArray))) 
 
         dispatch(setCourses(newCourseArray))
     }
