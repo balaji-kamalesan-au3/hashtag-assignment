@@ -1,4 +1,4 @@
-import allCourses, {disciplines,courses} from "../Data/get_courses";
+import allCourses, {disciplines} from "../Data/get_courses";
 
 
 
@@ -6,7 +6,8 @@ const initialState = {
 
     allCourses,
     currentCourses : allCourses,
-    disciplines
+    disciplines,
+    length : 424
 
 }
 
@@ -16,12 +17,14 @@ const reducer = (state = initialState,action) => {
             case "SET_COURSES" : 
                 return {
                     ...state,
-                    currentCourses : action.payload
+                    currentCourses : action.payload,
+                    length : action.payload.length
                 }
             case "RESTORE_ALL_COURSES" : 
                 return {
                     ...state,
-                    currentCourses : allCourses
+                    currentCourses : allCourses,
+                    length : 424
                 }
             }
         

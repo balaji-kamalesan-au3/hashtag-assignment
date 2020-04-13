@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { setDiscipline,setCourseswithQuery } from './Redux/actions';
 import './App.css'
+import RadioButton from './Components/RadioButton';
+import CourseCard from './Components/CourseCard';
+
 
 
  class App extends Component {
@@ -13,6 +16,10 @@ import './App.css'
         discipline : "All Courses"
     }
   }
+
+    onDisciplineChange = (e) => {
+      this.setState({discipline : e.target.value},() => {this.setDiscipline()})
+    }
 
     onQueryChange = (e) => {
         this.setState({[e.target.name] : e.target.value}, () => {this.updateCourseonQuery()})
@@ -33,33 +40,57 @@ import './App.css'
    
    setDiscipline = () => {
       this.props.setDiscipline(this.state.discipline,this.props.state.allCourses)
+     
    }
 
    setAllCourses = () => {
       this.props.setDiscipline("All Courses")
    }
 
+   generateCards = () => {
+     if(Array.isArray(this.props.state.currentCourses)){
+       return (
+         this.props.state.currentCourses.map(
+           (course) => {
+             return <CourseCard key={course["Course Name"]} course = {course} />
+           })
+        )
+     }
+     else {
+       
+      let combinedCourse = []
+       this.props.state.disciplines.forEach((discipline) => {
+         combinedCourse = combinedCourse.concat(this.props.state.allCourses[discipline])
+       })
+       console.log(combinedCourse)
+       return ( 
+          combinedCourse.map(
+          (course) => {
+            return <CourseCard key={course["Course Name"]} course = {course} />
+          })
+        )
+     }
+   }
+
    
   render() {
-    console.log(this.props)
+    console.log(this.props.state)
+
     return (
       <div className="h-100 container-fluid">
 
-        <div className="row">
+        <div className="row container-lg">
             <div className="col-3 col-md-3 SideBar h-100">
               <h6> Sidebar</h6>
               <input type="text" value={this.state.searchQuery} placeholder="Find Courses" name="searchQuery" onChange={this.onQueryChange}/>
+
+              <h5>List of Courses</h5>
+              {this.props.state.disciplines.map((discipline) => <RadioButton key={discipline} name={discipline} discipline={this.state.discipline} onChange={this.onDisciplineChange}/> )}
             </div>
-            <div className="col-9 col-md-3 CourseContainer">
-              
-                      <h1>This is a React app</h1>
-
-
-
-              <button onClick= {this.setDiscipline}>Set Mathematics</button>
-              
-             
-              <button onClick= {this.setAllCourses}>Set All Courses</button>
+            <div className="col-9 col-md-9 CourseContainer container-fluid">
+                 <h3>{this.state.discipline} - {this.props.state.length} courses available </h3>
+                 <div className="row">{this.generateCards()}</div>
+                 
             </div>
 
         </div>

@@ -434,7 +434,7 @@ export const courses = [
     {"S":{"No":"424"},"Discipline":"Textile Engineering","Course Name":"Yarn manufacture I : Principle of Carding and Drawing","SME Name":"Prof. R. Chattopadhyay","Institute":"IITD","Duration":"8 Weeks","Type":"Rerun","Course Start Date":"07/20/2020","Course End Date":"09/11/2020","Exam date":"09/27/2020","UG/PG":"UG","Core/Elective":"Core","FDP":"No","NOC URL":"https://nptel.ac.in/noc/courses/noc19/SEM2/noc19-te09","NPTEL URL":"https://nptel.ac.in/courses/116/102/116102048/"}
     ]
 
-export const disciplines = ["Aerospace Engineering", "Agriculture Engineering","Applied mechanics","Architecture And Planning","Biotechnology & Bioengineering","Chemical Engineering","Chemistry","Civil Engineering","Earth Sciences","Computer Science and Engineering","Design Engineering","Electrical and Electronics Engineering","Humanities and Social Sciences","Law","Management","Mathematics","Mechanical Engineering","Metallurgical and Materials Engineering","Multidisciplinary","Physics","Ocean Engineering","Textile Engineering"]
+export const disciplines = ["All Courses","Aerospace Engineering", "Agriculture Engineering","Applied mechanics","Architecture And Planning","Biotechnology & Bioengineering","Chemical Engineering","Chemistry","Civil Engineering","Earth Sciences","Computer Science and Engineering","Design Engineering","Electrical and Electronics Engineering","Humanities and Social Sciences","Law","Management","Mathematics","Mechanical Engineering","Metallurgical and Materials Engineering","Multidisciplinary","Physics","Ocean Engineering","Textile Engineering"]
 
 
 // 
