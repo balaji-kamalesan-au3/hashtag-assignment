@@ -7,7 +7,7 @@
 //  Final Output  => organisedCourses = {Aerospace Engineering: Array(10), Agriculture Engineering: Array(7), Applied mechanics: Array(2), Architecture And Planning: Array(14), Biotechnology & Bioengineering: Array(26), …}
 
 
-const courses = [
+export const courses = [
     {"S":{"No":"1"},"Discipline":"Aerospace Engineering","Course Name":"UAV Design - Part II","SME Name":"Prof. Saderla Subrahmanyam","Institute":"IITK","Duration":"8 Weeks","Type":"New","Course Start Date":"08/17/2020","Course End Date":"10/09/2020","Exam date":"10/17/2020","UG/PG":"","Core/Elective":"","FDP":"","NOC URL":"","NPTEL URL":""},
     {"S":{"No":"2"},"Discipline":"Aerospace Engineering","Course Name":"Aircraft Stability and Control","SME Name":"Prof. A. K. Ghosh","Institute":"IITK","Duration":"12 Weeks","Type":"Rerun","Course Start Date":"07/20/2020","Course End Date":"10/09/2020","Exam date":"10/17/2020","UG/PG":"UG","Core/Elective":"Core","FDP":"No","NOC URL":"https://nptel.ac.in/noc/courses/noc19/SEM2/noc19-ae10","NPTEL URL":"https://nptel.ac.in/courses/101/104/101104062/"},
     {"S":{"No":"3"},"Discipline":"Aerospace Engineering","Course Name":"Space Flight Mechanics","SME Name":"Prof. Manoranjan Sinha","Institute":"IIT KGP","Duration":"12 Weeks","Type":"New","Course Start Date":"07/20/2020","Course End Date":"10/09/2020","Exam date":"10/17/2020","UG/PG":"UG/PG","Core/Elective":"Elective","FDP":"Yes","NOC URL":"","NPTEL URL":""},
@@ -434,11 +434,11 @@ const courses = [
     {"S":{"No":"424"},"Discipline":"Textile Engineering","Course Name":"Yarn manufacture I : Principle of Carding and Drawing","SME Name":"Prof. R. Chattopadhyay","Institute":"IITD","Duration":"8 Weeks","Type":"Rerun","Course Start Date":"07/20/2020","Course End Date":"09/11/2020","Exam date":"09/27/2020","UG/PG":"UG","Core/Elective":"Core","FDP":"No","NOC URL":"https://nptel.ac.in/noc/courses/noc19/SEM2/noc19-te09","NPTEL URL":"https://nptel.ac.in/courses/116/102/116102048/"}
     ]
 
-const disciplines = ["Aerospace Engineering", "Agriculture Engineering","Applied mechanics","Architecture And Planning","Biotechnology & Bioengineering","Chemical Engineering","Chemistry","Civil Engineering","Earth Sciences","Computer Science and Engineering","Design Engineering","Electrical and Electronics Engineering","Humanities and Social Sciences","Law","Management","Mathematics","Mechanical Engineering","Metallurgical and Materials Engineering","Multidisciplinary","Physics","Ocean Engineering","Textile Engineering"]
+export const disciplines = ["Aerospace Engineering", "Agriculture Engineering","Applied mechanics","Architecture And Planning","Biotechnology & Bioengineering","Chemical Engineering","Chemistry","Civil Engineering","Earth Sciences","Computer Science and Engineering","Design Engineering","Electrical and Electronics Engineering","Humanities and Social Sciences","Law","Management","Mathematics","Mechanical Engineering","Metallurgical and Materials Engineering","Multidisciplinary","Physics","Ocean Engineering","Textile Engineering"]
 
 
 // 
-let organisedCourses = {};
+let allCourses = {};
 
 
 const addCourses = (discipline) => {
@@ -452,10 +452,10 @@ const addCourses = (discipline) => {
 
     const course = courses.filter(getCourses(discipline))
 
-    organisedCourses = {...organisedCourses, [discipline] : course }
+    allCourses = {...allCourses, [discipline] : course }
     
 }
 
 disciplines.map((course) => {addCourses(course)});
 
-export default organisedCourses
+export default allCourses
