@@ -63,7 +63,7 @@ import Navbar from './Components/Navbar';
        this.props.state.disciplines.forEach((discipline) => {
          combinedCourse = combinedCourse.concat(this.props.state.allCourses[discipline])
        })
-       console.log(combinedCourse)
+      
        return ( 
           combinedCourse.slice(0,50).map(
           (course) => {
@@ -82,7 +82,7 @@ import Navbar from './Components/Navbar';
 
    
   render() {
-    console.log(this.props.state)
+  
 
     return (  
       <Fragment>

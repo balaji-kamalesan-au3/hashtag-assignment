@@ -4,7 +4,7 @@
 
 export const setDiscipline = (discipline,courses) => dispatch => {
     if(discipline === "All Courses"){
-        console.log("Event Fired")
+      
         dispatch(restoreAllCourse());
     }
     else{
@@ -36,7 +36,7 @@ export const setCourseswithQuery = (query,courses) => dispatch => {
     else {
     
         let eachDisciplineArray= Object.values(courses);
-        console.log(eachDisciplineArray)
+      
         let newCourseArray = []
         
         eachDisciplineArray.forEach((indvidualDisciplineArray) => newCourseArray= newCourseArray.concat (searchCoursesinArray(indvidualDisciplineArray))) 
