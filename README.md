@@ -8,7 +8,7 @@ Flow of App Creation (In order)
 
     1 . Data Organisation:
         => Gathered data from NPTEL Website as xlsx form
-        => Converted the xlsx for to JSON using online convertor
+        => Converted the xlsx to JSON using online convertor
         => Reorganised the data by diffret category of disciplines 
         (https://github.com/balaji-kamalesan-au3/hashtag-assignment/blob/master/src/Data/get_courses.js)
         => Used this data with redux
@@ -33,7 +33,7 @@ Features Implemented
 
 Time Taken
 
-    14 Hours to from the start to end
+    14 Hours from the start to end
 
 
 How to Install and Run the App:
