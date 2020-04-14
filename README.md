@@ -9,7 +9,8 @@ Flow of App Creation (In order)
     1 . Data Organisation:
         => Gathered data from NPTEL Website as xlsx form
         => Converted the xlsx for to JSON using online convertor
-        => Reorganised the data by diffret category of disciplines (https://github.com/balaji-kamalesan-au3/hashtag-assignment/blob/master/src/Data/get_courses.js)
+        => Reorganised the data by diffret category of disciplines 
+        (https://github.com/balaji-kamalesan-au3/hashtag-assignment/blob/master/src/Data/get_courses.js)
         => Used this data with redux
     
     2 . SetUp Redux:
@@ -18,7 +19,8 @@ Flow of App Creation (In order)
     
     3 . FrontEnd
         => Created necessary layouts like Cards, Radio Buttons for resusability
-        => Created methods that will pass required actions to redux actions when query or category is selected then it takes care of re rendering the component
+        => Created methods that will pass required actions to redux actions when query or category is selected,
+        then it takes care of re rendering the component
         => Finally organised each modules to complete the Application
 
 Features Implemented
