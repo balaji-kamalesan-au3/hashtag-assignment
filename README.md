@@ -4,6 +4,8 @@
 The goal is to create a page to browse, search and filter through a database of courses.
 
 Flow of App Creation (In order)
+
+
     1 . Data Organisation:
         => Gathered data from NPTEL Website as xlsx form
         => Converted the xlsx for to JSON using online convertor
