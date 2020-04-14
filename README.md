@@ -8,7 +8,7 @@ Flow of App Creation (In order)
 
     1 . Data Organisation:
         => Gathered data from NPTEL Website as xlsx form
-        => Converted the xlsx for to JSON using online convertor
+        => Converted the xlsx to JSON using online convertor
         => Reorganised the data by diffret category of disciplines 
         (https://github.com/balaji-kamalesan-au3/hashtag-assignment/blob/master/src/Data/get_courses.js)
         => Used this data with redux
@@ -33,7 +33,7 @@ Features Implemented
 
 Time Taken
 
-    14 Hours to from the start to end
+    14 Hours from the start to end
 
 
 How to Install and Run the App:
@@ -41,22 +41,16 @@ How to Install and Run the App:
     Setup Node (Version) >= 8.10 and npm (Version) >= 5.6 on your machine
     Clone the Repository from this URL https://github.com/balaji-kamalesan-au3/hashtag-assignment.git
     To clone run the following command
-<<<<<<< HEAD
         git clone https://github.com/balaji-kamalesan-au3/hashtag-assignment.git
     Navigate inside the cloned directory
     Run the following commands 
         npm install
         npm run start
-=======
-      git clone https://github.com/balaji-kamalesan-au3/hashtag-assignment.git
-    Navigate inside the cloned directory
-    Run the following commands 
-     npm install
-     npm run start
->>>>>>> f9c0cc7b17d8052ad34c47319f51441eb5ad25c9
     This will start the app for you 
     If you face any problem please reach me through +91 8838159833
 
+
+Source of Data used  : https://docs.google.com/spreadsheets/d/e/2PACX-1vTDp7Tc1jHmOcE82rml9Fj1wgdERMb8yMMyUMZC6B2I1VOVO8zt-BBbPRhvoTBTuOgN87FCUDasHEZ-/pubhtml?urp=gmail_link
 
 Looking forward to hear from you.
 
