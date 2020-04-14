@@ -37,7 +37,7 @@ function CourseCard(props) {
                     <img src="https://www.freeiconspng.com/uploads/courses-icon-28.png" width="30" alt="Svg Courses Icon" />
                     </div>
                     <div className="col-sm-10">
-                        <p className="card-title">{props.course["Course Name"]}</p>
+                        <p className="card-title"><strong>{props.course["Course Name"]}</strong></p>
                         <h6>{props.course["SME Name"]}</h6>
                     </div>
                    
