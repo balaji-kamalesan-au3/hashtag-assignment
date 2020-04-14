@@ -21,7 +21,9 @@ export const setCourseswithQuery = (query,courses) => dispatch => {
     const searchCoursesinArray = (array) => {
         let arr =  array.filter((course) => {
             const name = course["Course Name"].toLowerCase();
-            if(name.includes(searchQuery)!== false) return course
+            const professor = course["SME Name"].toLowerCase();
+            const discipline = course["Discipline"].toLowerCase();
+            if(name.includes(searchQuery)!== false || professor.includes(searchQuery) !== false|| discipline.includes(searchQuery)!== false) return course
        })
        return arr
     }

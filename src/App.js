@@ -94,7 +94,7 @@ import Navbar from './Components/Navbar';
             <div className="col-3 col-md-3 SideBar h-100">
               <div className="row">
                 <div className="form-group has-search">
-                <span class="fa fa-search form-control-feedback"></span>
+                <span className="fa fa-search form-control-feedback"></span>
                 </div>
                 <input type="text" value={this.state.searchQuery} placeholder="Find Courses" name="searchQuery" onChange={this.onQueryChange} className="form-control" />
               </div>
