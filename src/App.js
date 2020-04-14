@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from "react-redux";
 import { setDiscipline,setCourseswithQuery } from './Redux/actions';
 import './App.css'
 import RadioButton from './Components/RadioButton';
 import CourseCard from './Components/CourseCard';
+import Navbar from './Components/Navbar';
 
 
 
@@ -64,7 +65,7 @@ import CourseCard from './Components/CourseCard';
        })
        console.log(combinedCourse)
        return ( 
-          combinedCourse.map(
+          combinedCourse.slice(0,50).map(
           (course) => {
             return <CourseCard key={course["Course Name"]} course = {course} />
           })
@@ -72,20 +73,37 @@ import CourseCard from './Components/CourseCard';
      }
    }
 
+   generateDisciplineButtons = () => {
+      return (
+        this.props.state.disciplines.map((discipline) => 
+        <RadioButton key={discipline} name={discipline} discipline={this.state.discipline} onChange={this.onDisciplineChange}/> )
+      )
+   }
+
    
   render() {
     console.log(this.props.state)
 
-    return (
-      <div className="h-100 container-fluid">
+    return (  
+      <Fragment>
+        <Navbar />
 
-        <div className="row container-lg">
+      <div className="h-100 container-fluid main-container">
+    
+        <div className="row container-fluid">
             <div className="col-3 col-md-3 SideBar h-100">
-              <h6> Sidebar</h6>
-              <input type="text" value={this.state.searchQuery} placeholder="Find Courses" name="searchQuery" onChange={this.onQueryChange}/>
-
-              <h5>List of Courses</h5>
-              {this.props.state.disciplines.map((discipline) => <RadioButton key={discipline} name={discipline} discipline={this.state.discipline} onChange={this.onDisciplineChange}/> )}
+              <div className="row">
+                <div className="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                </div>
+                <input type="text" value={this.state.searchQuery} placeholder="Find Courses" name="searchQuery" onChange={this.onQueryChange} className="form-control" />
+              </div>
+             
+            
+            `  <h5>Category</h5>
+                {this.generateDisciplineButtons()}`
+             
+              
             </div>
             <div className="col-9 col-md-9 CourseContainer container-fluid">
                  <h3>{this.state.discipline} - {this.props.state.length} courses available </h3>
@@ -97,6 +115,7 @@ import CourseCard from './Components/CourseCard';
         
 
       </div>
+      </Fragment>
     )
   }
 }
