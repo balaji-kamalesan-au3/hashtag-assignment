@@ -41,19 +41,11 @@ How to Install and Run the App:
     Setup Node (Version) >= 8.10 and npm (Version) >= 5.6 on your machine
     Clone the Repository from this URL https://github.com/balaji-kamalesan-au3/hashtag-assignment.git
     To clone run the following command
-<<<<<<< HEAD
         git clone https://github.com/balaji-kamalesan-au3/hashtag-assignment.git
     Navigate inside the cloned directory
     Run the following commands 
         npm install
         npm run start
-=======
-      git clone https://github.com/balaji-kamalesan-au3/hashtag-assignment.git
-    Navigate inside the cloned directory
-    Run the following commands 
-     npm install
-     npm run start
->>>>>>> f9c0cc7b17d8052ad34c47319f51441eb5ad25c9
     This will start the app for you 
     If you face any problem please reach me through +91 8838159833
 
